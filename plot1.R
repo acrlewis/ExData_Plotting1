@@ -1,7 +1,9 @@
-# this file creates a histogram of global active power consumption for two days (feb 1st and 2nd 2007)
+# plot1.R
+# Coursera Course Project 1
+# This creates a histogram of global active power consumption for 2/1/2007 and 2/2/2007
 
 # read the data
-# assumes data file is in the working directory
+setwd("/Users/clewis/development/ExData_Plotting1")
 rawdata <- read.csv("household_power_consumption.txt", sep=";", na.strings= "?", header = TRUE)
 
 # create subsets of data for each day in the plot
