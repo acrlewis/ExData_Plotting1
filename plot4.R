@@ -8,11 +8,11 @@ setwd("/Users/clewis/development/ExData_Plotting1")
 rawdata <- read.csv("household_power_consumption.txt", sep=";", na.strings= "?", header = TRUE)
 
 # create subsets of data for each day in the plot
-data1 <- subset(rawdata, rawdata$Date == '1/2/2007')
-data2 <- subset(rawdata, rawdata$Date == '2/2/2007')
+# data1 <- subset(rawdata, rawdata$Date == '1/2/2007')
+# data2 <- subset(rawdata, rawdata$Date == '2/2/2007')
 
 # combine the subsets into one
-data <- rbind(data1, data2)
+data <- rbind(subset(rawdata, rawdata$Date == '1/2/2007'), subset(rawdata, rawdata$Date == '2/2/2007'))
 
 # create a new field that has both date and time
 data$Date_Time <- paste(data$Date, data$Time, sep =" ")
